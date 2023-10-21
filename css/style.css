@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
 body{
   font-family: 'Noto Sans', sans-serif;
   font-size: 14px;
@@ -74,9 +78,18 @@ ul{
   transition: fill .5s ease-in;
 }
 
+.button{
+  position: relative;
+  width: 320px;
+  text-align: left;
+}
+
 .header__button{
-  margin-top: 50px;
-  margin-bottom: auto;
+  margin: 50px auto auto;
+}
+
+.clients__button{
+  display: block;
 }
 
 .button:hover .button__path{
@@ -84,16 +97,23 @@ ul{
 }
 
 .button__text{
+  position: absolute;
   font-size: 18px;
   line-height: 25px;
   display: inline-block;
-  transform: translate(-57px, -17px);
+  left: 49px;
+  bottom: 16px;
 }
 
 .social{
   display: flex;
   justify-content: center;
   align-content: center;
+}
+
+.social__item{
+  display: flex;
+  align-items: center;
 }
 
 .social__link{
@@ -370,8 +390,16 @@ ul{
   color: #fff;
 }
 
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus{
+  -webkit-text-fill-color: #fff;
+  -webkit-box-shadow: transparent;
+  transition: background-color 5000s ease-in-out 0s;
+}
 
 .footer__form-btn{
+  width: 190px;
   background-color: transparent;
   border: none;
   padding: 0;
@@ -606,9 +634,15 @@ ul{
 }
 
 @media  (max-width: 375px){
-  .button__text{
-    margin-left: -76px;
+  .button{
+    width: 300px;
   }
+
+  .header__button .button__text,
+  .clients__button .button__text{
+  left: 44px;
+  bottom: 11px;
+}
 
   .title{
     margin-bottom: 40px;
@@ -629,5 +663,3 @@ ul{
     width: 280px;
   }
 }
-
-

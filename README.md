@@ -1,2 +1,2 @@
-# Solar-EXE
-Solar EXE - landing page
+# SOLAR-EXE
+SOLAR EXE - landing page
